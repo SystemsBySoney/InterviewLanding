@@ -41,7 +41,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--charco
 .letter::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--teal),var(--sage));border-radius:12px 12px 0 0;}
 .letter-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--border);}
 .letter-date{font-size:14px;color:var(--muted);}
-.salutation{font-size:15px;color:var(--charcoal);font-weight:500;margin-bottom:18px;}
+
 .letter-body p{font-size:15px;color:#374151;line-height:1.8;margin-bottom:14px;}
 .letter-body p:last-child{margin-bottom:0;}
 .letter-sign{margin-top:28px;padding-top:20px;border-top:1px solid var(--border);}
@@ -223,75 +223,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--charco
   .modal-header-sub{display:none;}
   .dl-btn{padding:6px 10px;}
   .dl-btn span{display:none;}
-
-  /* Passcode modal */
-  .pc-box{padding:28px 24px;margin:0 12px;}
-  .pc-title{font-size:15px;}
-  .pc-sub{font-size:13px;}
-  .pc-input{font-size:20px;padding:10px 12px;}
-  .pc-submit{padding:10px 14px;font-size:13px;}
 }
 
-/* ── PASSCODE MODAL ── */
-.pc-backdrop{
-  position:fixed;inset:0;z-index:600;
-  background:rgba(15,26,27,0.8);
-  backdrop-filter:blur(6px);
-  display:flex;align-items:center;justify-content:center;
-  opacity:0;pointer-events:none;
-  transition:opacity 0.2s ease;
-}
-.pc-backdrop.open{opacity:1;pointer-events:all;}
-.pc-box{
-  background:var(--white);
-  border-radius:14px;
-  padding:36px 40px;
-  width:100%;max-width:380px;
-  box-shadow:0 24px 64px rgba(0,0,0,0.35);
-  transform:translateY(12px);
-  transition:transform 0.2s ease;
-  text-align:center;
-}
-.pc-backdrop.open .pc-box{transform:translateY(0);}
-.pc-lock{font-size:28px;margin-bottom:14px;}
-.pc-title{font-size:16px;font-weight:700;color:var(--charcoal);margin-bottom:6px;}
-.pc-sub{font-size:13px;color:var(--muted);margin-bottom:24px;line-height:1.5;}
-.pc-input-wrap{display:flex;gap:8px;margin-bottom:12px;}
-.pc-input{
-  flex:1;
-  padding:11px 16px;
-  border:1.5px solid var(--border);
-  border-radius:8px;
-  font-size:22px;
-  font-family:'Space Mono',monospace;
-  letter-spacing:0.25em;
-  color:var(--charcoal);
-  text-align:center;
-  outline:none;
-  transition:border-color 0.15s;
-  background:var(--cream);
-}
-.pc-input:focus{border-color:var(--teal);}
-.pc-input.error{border-color:#dc2626;animation:shake 0.35s ease;}
-.pc-submit{
-  padding:11px 20px;
-  background:var(--teal);
-  color:white;
-  border:none;
-  border-radius:8px;
-  font-size:13px;
-  font-weight:600;
-  cursor:pointer;
-  font-family:'DM Sans',sans-serif;
-  transition:background 0.15s;
-  white-space:nowrap;
-}
-.pc-submit:hover{background:var(--teal-light);}
-.pc-error{font-size:12px;color:#dc2626;min-height:18px;margin-bottom:8px;font-weight:500;}
-.pc-cancel{font-size:12px;color:var(--muted);cursor:pointer;background:none;border:none;font-family:'DM Sans',sans-serif;text-decoration:underline;text-underline-offset:2px;}
-.pc-cancel:hover{color:var(--charcoal);}
-@keyframes shake{
-  0%,100%{transform:translateX(0);}
   20%{transform:translateX(-6px);}
   40%{transform:translateX(6px);}
   60%{transform:translateX(-4px);}
@@ -327,18 +260,18 @@ body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--charco
   <!-- LETTER -->
   <div class="letter">
     <div class="letter-header">
-      <div class="letter-date">Tuesday, May 5, 2026</div>
+      <div class="letter-date">May 7, 2026</div>
+      <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--teal);letter-spacing:0.08em;text-transform:uppercase;">A note of thanks</div>
     </div>
-    <div class="salutation">Dear Erin, Christy, Steve, Allison and Katherine,</div>
     <div class="letter-body">
-      <p>Thank you again for the time and for the opportunity. I'm really excited about the Clinical Sales Engineer role at Ambience and appreciate the chance to walk you through my approach.</p>
-      <p>I've included a short brief ahead of the session to provide context for the demo — including the problem space, target stakeholders, and how I'm thinking about positioning the solution in this scenario.</p>
-      <p>During the session, I'll walk through a live, end-to-end workflow to show how this would look in practice, and I'm happy to pause throughout for questions or discussion.</p>
-      <p>Looking forward to speaking with you all.</p>
+      <p>Thank you again to Steve, Erin, Christy, Alyssa, Blake, and Katherine for taking the time to meet with me today.</p>
+      <p>I genuinely appreciated how interactive and conversational the session felt. The questions, pushback, and discussion throughout the demo made it feel much more like a real working session than an interview — which honestly made the experience really enjoyable from my side too.</p>
+      <p>It was also great hearing more about how the SE and SGE teams collaborate internally and support customers together. You can tell there's a strong partnership dynamic across the team, and that really stood out to me.</p>
+      <p>I'm also very grateful for the thoughtful feedback and for how welcoming everyone was throughout the conversation. I had a lot of fun building this demo and getting the chance to walk through it with all of you.</p>
+      <p>Thank you again for the time and opportunity — it was genuinely a pleasure meeting everyone.</p>
     </div>
     <div class="letter-sign">
-      <div class="sign-close">Best,</div>
-      <div class="sign-name">Sunan Fatima</div>
+      <div class="sign-name">— Sunan Fatima</div>
     </div>
   </div>
 
@@ -372,11 +305,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--charco
         </div>
       </div>
       <div class="card-spacer"></div>
-      <button class="card-btn" id="demo-btn" onclick="openPasscode()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+      <a class="card-btn" href="https://systemsbysoney.github.io/DemoLinkSF/" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
         Launch Demo Site
-      </button>
-      <div class="card-btn-note" id="demo-note">Passcode required</div>
+      </a>
     </div>
 
     <!-- BRIEF -->
@@ -465,55 +397,8 @@ document.addEventListener('keydown',function(e){
 </script>
 
 
-<!-- PASSCODE MODAL -->
-<div class="pc-backdrop" id="pc-modal">
-  <div class="pc-box">
-    <div class="pc-lock">🔐</div>
-    <div class="pc-title">Demo Access</div>
-    <div class="pc-sub">Enter the passcode to launch<br>the HealthLink Compass demo site.</div>
-    <div class="pc-input-wrap">
-      <input class="pc-input" id="pc-input" type="password" maxlength="4"
-        inputmode="numeric" placeholder="····"
-        onkeydown="if(event.key==='Enter')checkPasscode()"
-        oninput="document.getElementById('pc-error').textContent='';this.classList.remove('error')">
-      <button class="pc-submit" onclick="checkPasscode()">Enter →</button>
-    </div>
-    <div class="pc-error" id="pc-error"></div>
-    <button class="pc-cancel" onclick="closePasscode()">Cancel</button>
-  </div>
-</div>
 
 <script>
-function openPasscode(){
-  document.getElementById('pc-modal').classList.add('open');
-  document.body.style.overflow='hidden';
-  setTimeout(()=>document.getElementById('pc-input').focus(),200);
-}
-function closePasscode(){
-  document.getElementById('pc-modal').classList.remove('open');
-  document.getElementById('pc-input').value='';
-  document.getElementById('pc-error').textContent='';
-  document.getElementById('pc-input').classList.remove('error');
-  document.body.style.overflow='';
-}
-function checkPasscode(){
-  const val=document.getElementById('pc-input').value.trim();
-  if(val==='0507'){
-    closePasscode();
-    window.open('https://systemsbysoney.github.io/DemoLinkSF/','_blank');
-    document.getElementById('demo-note').textContent='Demo launched ✓';
-    document.getElementById('demo-note').style.color='var(--teal)';
-  } else {
-    const inp=document.getElementById('pc-input');
-    inp.classList.add('error');
-    document.getElementById('pc-error').textContent='Incorrect passcode. Try again.';
-    inp.value='';
-    setTimeout(()=>inp.focus(),50);
-  }
-}
-document.addEventListener('keydown',function(e){
-  if(e.key==='Escape'&&document.getElementById('pc-modal').classList.contains('open'))closePasscode();
-});
 </script>
 
 </body>
